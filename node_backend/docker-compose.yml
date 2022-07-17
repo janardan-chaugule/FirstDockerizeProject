@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+    server:
+      build: .
+      ports:
+         - '4003:5000'
+    db:
+      image: 'postgres'
+      ports: 
+          - '4321:5432'
+      environment:
+         POSTGRES_PASSWORD: 'Password10'
+         POSTGRES_USER: 'docker'
+         
+
+
+
